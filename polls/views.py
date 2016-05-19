@@ -18,7 +18,7 @@ d = {}
 with open(r"resolution\label_resolution_share_format.txt") as f:
 	for line in f:
 		(key, val) = line.split("\t")
-	 	d[key] = val
+		d[key] = val
 #vectorizer = pickle.load(open(r'C:\Users\Ray\Desktop\vectorizer\vectorizer.pickle','rb'))
 def predict(text):
 	intention_feature = vectorizer.transform([text])
