@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{%load staticfiles%}
+<html>
+<head>
+<title>TREAT</title>
+<link href="{% static 'css/site.css'%}" rel="stylesheet">
+</head>
+<body>
+<nav id="nav01"></nav>
+
+<div id="main">
+  <h1>Welcome to TREAT</h1> 
+  <h2>Towards Customer Trouble Tickets Resolution Automation</h2>
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+  <footer id="foot01"></footer>
+</div>
+<script src="{% static 'js/script.js'%}"></script>
+</body>
+</html>

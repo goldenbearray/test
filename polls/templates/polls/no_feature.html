@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{%load staticfiles%}
+<html>
+<head>
+<title>TREAT</title>
+<link href="{% static 'css/site.css'%}" rel="stylesheet">
+</head>
+<body>
+<nav id="nav01"></nav>
+
+<div id="main">
+  <h1>Welcome to TREAT</h1> 
+  <h2>Prediction Results:</h2>
+   	<ul>
+   		<li><b>Customer Intention:</b> {{Intention}}</li>
+`		<li>Sorry, there are not enough features to represent this customer intention.</li>
+    </ul>
+
+  <footer id="foot01"></footer>
+</div>
+<script src="{% static 'js/result_script.js'%}"></script>
+</body>
+</html>
+
